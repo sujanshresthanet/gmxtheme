@@ -1,0 +1,162 @@
+
+<!-- Header and Navbar -->
+<header class="main-header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="row">
+      <div class="navbar-header col-md-3">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-md-9">
+        {% if page.primary_menu %}
+          {{ page.primary_menu }}
+        {% endif %}
+      </div>
+      <!--End Navigation -->
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  {% if is_front and page.welcome_banner_text %}
+    <div class="container welcome-banner-text">
+      <div class="row">
+        <div class="col-md-12">
+            {{ page.welcome_banner_text }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <!-- End Banner -->
+
+</header>
+<!--End Header & Navbar -->
+
+
+
+<!-- Start Top Widget -->
+
+  {% if page.topwidget_first or page.topwidget_second or page.topwidget_third %}
+    <div class="topwidget">
+      <!-- start: Container -->
+      <div class="container">
+
+        <div class="row">
+          <!-- Top widget first region -->
+          <div class = {{ topwidget_class }}>
+            {% if page.topwidget_first %}
+              {{ page.topwidget_first }}
+            {% endif %}
+          </div>
+          <!-- End top widget third region -->
+          <!-- Top widget second region -->
+          <div class = {{ topwidget_class }}>
+            {% if page.topwidget_second %}
+              {{ page.topwidget_second }}
+            {% endif %}
+          </div>
+          <!-- End top widget third region -->
+          <!-- Top widget third region -->
+          <div class = {{ topwidget_third_class }}>
+            {% if page.topwidget_third %}
+              {{ page.topwidget_third }}
+            {% endif %}
+          </div>
+          <!-- End top widget third region -->
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+<!--End Top Widget -->
+
+
+
+{% if is_front and page.bottom_second %}
+<div class="tetra">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">{{ page.bottom_second }}</div>
+  </div>
+  </div>
+</div>
+{% endif %}
+
+
+
+<div class="tri">
+  <div class="container">
+    <div class="row"><h2>Alianzas</h2><br>
+     <div class="col-md-4">{{ page.alianza1 }}</div>
+     <div class="col-md-4">{{ page.alianza2 }}</div>
+     <div class="col-md-4">{{ page.alianza3 }}</div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bi">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">{{ page.highlighted }}</div>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="penta">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">{{ page.bottom_third }}</div>
+  </div>
+  </div>
+</div>
+
+
+{% if page.recomendamos %}
+<div class="hepta">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">{{ page.recomendamos }} </div>
+  </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% if copyright_text or show_credit_link %}
+<div class="copyright">
+  <div class="container">
+    <div class="row">
+
+      <!-- Copyright -->
+      <div class="col-sm-9 col-md-9">
+Av. Pocuro # 2369, Of. 304, Santiago, Chile ::: +56-9-99400628:: +56-2-28390373 - contacto@bizart.cl - Skype: contacto.bizart - Todos los derechos reservados
+      </div>
+      <!-- End Copyright -->
+
+      <!-- Credit link -->
+      {% if show_credit_link %}
+        <div class="col-sm-3 col-md-3">
+          <p class="credit-link">Designed by <a href="http://www.gmx.cl" target="_blank">GMX</a></p>
+        </div>
+      {% endif %}
+      <!-- End Credit link -->
+
+    </div>
+  </div>
+</div>
+{% endif %}

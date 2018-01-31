@@ -1,0 +1,158 @@
+@media (min-width: 767px) {
+
+  .region-primary-menu{
+    display: inline-block;
+    float: right;
+    width: auto;
+    margin: 0;
+  }
+
+  .region-primary-menu,
+  .menu-base-theme li a{
+    background: none;
+  }
+
+  .menu-base-theme a{
+    border: 0;
+  }
+
+  .menu-base-theme > li{
+    border: 0;
+  }
+
+  .menu-base-theme a span.sub-arrow {
+    padding: 0;
+    top: 23px;
+    margin-top: 0;
+    bottom: 2px;
+    right: 5px;
+    margin-left: -5px; 
+    left: auto;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid dashed dashed dashed;
+    border-color: #fff transparent transparent transparent;
+    background: transparent;
+  }
+
+  .menu-base-theme ul {
+    border: none;
+    padding: 0;
+    background-color: #fff;
+    background: rgba(0, 0, 0, 0.34); /* background del submenu */
+  }
+
+  .menu-base-theme ul a {
+  color: #fff;
+  }
+
+  .menu-base-theme ul a:hover {
+    background: rgba(0, 0, 0, 0.1); /* background del submenu */
+    color: #ffc04c;
+  }
+
+  .menu-base-theme ul.has-submenu li {
+    border-bottom: 1px solid #fff;
+  }
+
+  .welcome-banner-text h2{
+    font-size: 50px;
+  }
+
+  .welcome-banner-text{
+    font-size: 14px;
+  }
+
+  .bottom-widgets{
+    text-align: left;
+    padding: 50px 0;
+  }
+
+  .footerwidget{
+    padding: 50px 0;
+  }
+
+  .credit-link{
+    text-align: right;
+  }
+
+  
+
+  /*comment*/
+
+  .comment-wrap .author-details{ width: 10%; }
+
+  .comment-wrap .author-comments{ width: 90%;}
+}
+
+
+
+/* Slider 1 */
+
+#views_slideshow_controls_text_sos-block_1 {
+  text-align: center;
+}
+
+#views_slideshow_controls_text_pause_sos-block_1 a {
+  display: none;
+}
+
+#views_slideshow_controls_text_previous_sos-block_1 a:hover {
+ background: url('images/arrow-prev.png') no-repeat 0px 50%;
+}
+
+#views_slideshow_controls_text_previous_sos-block_1 a {
+background: url('images/arrow-prev.png') no-repeat 0px 50%;
+color: transparent;
+}
+
+
+#views_slideshow_controls_text_next_sos-block_1 a:hover {
+background: url('images/arrow-next.png') no-repeat 100% 50%;
+}
+
+#views_slideshow_controls_text_next_sos-block_1 a {
+background: url('images/arrow-next.png') no-repeat 100% 50%;
+color: transparent;
+}
+
+/* Slider 2 - Footer */
+
+#views_slideshow_controls_text_recomendamos_footer-block_1 {
+  text-align: center;
+}
+
+#views_slideshow_controls_text_pause_recomendamos_footer-block_1 a {
+  display: none;
+}
+
+#views_slideshow_controls_text_previous_recomendamos_footer-block_1 a:hover {
+ background: url('images/arrow-prev.png') no-repeat 0px 50%;
+}
+
+#views_slideshow_controls_text_previous_recomendamos_footer-block_1 a {
+background: url('images/arrow-prev.png') no-repeat 0px 50%;
+color: transparent;
+}
+
+
+#views_slideshow_controls_text_next_recomendamos_footer-block_1 a:hover {
+background: url('images/arrow-next.png') no-repeat 100% 50%;
+}
+
+#views_slideshow_controls_text_next_recomendamos_footer-block_1 a {
+background: url('images/arrow-next.png') no-repeat 100% 50%;
+color: transparent;
+}
+
+
+/* Menus activos con submenus */
+
+a.actif {
+  color: #FFA500;
+}
+
+
+
+

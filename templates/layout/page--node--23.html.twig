@@ -1,0 +1,167 @@
+
+
+<!-- Header and Navbar -->
+<header class="main-header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="row">
+      <div class="navbar-header col-md-3">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-md-9">
+        {% if page.primary_menu %}
+          {{ page.primary_menu }}
+        {% endif %}
+      </div>
+      <!--End Navigation -->
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  {% if page.welcome_banner_text %}
+    <div class="container welcome-banner-text">
+      <div class="row">
+        <div class="col-md-12">
+            {{ page.welcome_banner_text }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <!-- End Banner -->
+
+</header>
+<!--End Header & Navbar -->
+
+
+<!-- Page Title -->
+{%  if page.page_title and not is_front %}
+  <div id="page-title">
+    <div id="page-title-inner">
+      <!-- start: Container -->
+      <div class="container">
+        {{ page.page_title }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<!-- End Page Title -- >
+
+
+<!-- layout -->
+<div id="wrapper">
+  <!-- start: Container -->
+  <div class="container">
+
+    <!--Content top-->
+      {% if page.content_top %}
+        <div class="row">
+          {{ page.content_top }}
+        </div>
+      {% endif %}
+    <!--End Content top-->
+
+    <!--start:content -->
+
+
+    <div class="row layout">
+      <!--- Start Left SideBar -->
+      {% if page.sidebar_first %}
+        <div class="sidebar" >
+          <div class = {{sidebarfirst}} >
+            {{ page.sidebar_first }}
+          </div>
+        </div>
+      {% endif %}
+      <!---End Right SideBar -->
+
+      <!--- Start content -->
+      {% if page.content %}
+        <div class="content_layout">
+          <div class={{contentlayout}}>
+            {{ page.content }}
+          </div>
+        </div>
+      {% endif %}
+      <!---End content -->
+
+      <!--- Start Right SideBar -->
+      {% if page.sidebar_second %}
+        <div class="sidebar">
+          <div class={{sidebarsecond}}>
+            {{ page.sidebar_second }}
+          </div>
+        </div>
+      {% endif %}
+      <!---End Right SideBar -->
+
+    </div>
+    <!--End Content -->
+
+    <!--Start Content Bottom-->
+    {% if page.content_bottom %}
+      <div class="row">
+        {{ page.content_bottom }}
+      </div>
+    {% endif %}
+    <!--End Content Bottom-->
+  </div>
+</div>
+<!-- End layout -->
+
+
+
+<div class="panel">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12 col-md-12">{{ page.panel }}</div>
+      <div class="col-sm-6 col-md-6">{{ page.panela }}</div>
+      <div class="col-sm-6 col-md-6">{{ page.panelb }}</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% if copyright_text or show_credit_link %}
+<div class="copyright">
+  <div class="container">
+    <div class="row">
+
+      <!-- Copyright -->
+      <div class="col-sm-6 col-md-6">
+        {% if copyright_text %}
+           {{ page.direccion }}  <br /> {{ copyright_text }}
+        {% endif %}
+      </div>
+      <!-- End Copyright -->
+
+      <!-- Credit link -->
+      {% if show_credit_link %}
+        <div class="col-sm-6 col-md-6">
+          <p class="credit-link">Designed by <a href="http://www.gmx.cl" target="_blank">GMX</a></p>
+        </div>
+      {% endif %}
+      <!-- End Credit link -->
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+

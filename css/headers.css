@@ -1,0 +1,66 @@
+
+.main-header{
+  background: url(../images/laptop1.jpg);
+  color: #fff;
+  padding: 30px 0 60px 0;
+  background-size: cover;
+  position: relative;
+}
+
+.main-header:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(21, 22, 26, 0.55);
+}
+
+.main-header nav{
+  background: none;
+  border: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.main-header .region{
+  position: relative;
+  z-index: 2;
+}
+
+/* Código header de la página "empresa" (Node 1) */
+
+.header-empresa{
+  background: url(../images/laptop.jpg);
+  color: #fff;
+  padding: 10px 0 80px 0;
+  background-size: cover;
+  position: relative;
+}
+
+.header-empresa:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(21, 22, 26, 0.88);
+}
+
+.header-empresa nav{
+  background: none;
+  border: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.header-empresa .region{
+  position: relative;
+  z-index: 2;
+}
+
+/* END ::: Código header de la página "empresa" (Node 1) */
