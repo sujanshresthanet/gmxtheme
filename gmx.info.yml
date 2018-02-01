@@ -2,7 +2,8 @@ name: Drupal Eight GMX Theme
 type: theme
 description: 'GMX Drupal 8 Responsive Theme. Developed & Designed by https://gmx.cl'
 package: core
-# core: 8.x
+version: '8.x-1.0'
+core: '8.x'
 
 #Libraries
 libraries:
@@ -36,7 +37,3 @@ regions:
   panela: 'Panel A'
   panelb: 'Panel B'
   auto_hidden_block: 'Auto hidden blocks'
-
-# Information added by Drupal.org packaging script on 2016-01-08
-version: '8.x-1.0'
-core: '8.x'

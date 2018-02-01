@@ -17,12 +17,12 @@ features:
    name: true
    node_user_picture: true
    slogan: true
-facebook_url: 'https://www.facebook.com/zymphonies'
-twitter_url: 'https://twitter.com/zymphonies'
+facebook_url: 'https://www.facebook.com/'
+twitter_url: 'https://twitter.com/'
 google_plus_url: 'https://plus.google.com/+ZymphoniesTechnologies'
-linkedin_url: 'http://www.linkedin.com/company/zymphonies'
-pinterest_url: 'https://www.pinterest.com/zymphonies'
+linkedin_url: 'http://www.linkedin.com/company/'
+pinterest_url: 'https://www.pinterest.com/'
 rss_url: 'rss.xml'
-copyright_text: 'Copyright 2015· All rights reserved'
+copyright_text: 'Copyright 2018· All rights reserved'
 show_social_icon: 1
 show_credit_link: 1

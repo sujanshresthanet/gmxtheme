@@ -19,7 +19,7 @@ use Drupal\file\Plugin\Core\Entity\FileInterface;
  * Implements hook_preprocess_page() for block templates.
  */
 
-function drupal8_zymphonies_theme_preprocess_page(&$variables) {
+function gmx_preprocess_page(&$variables) {
 
   // Add Responsive class for Top Widget.
   if (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second']) && !empty($variables['page']['topwidget_third'])) {
@@ -53,7 +53,7 @@ function drupal8_zymphonies_theme_preprocess_page(&$variables) {
 /**
 * Implements hook_preprocess_menu() for menu.html.twig.
 */
-function drupal8_zymphonies_preprocess_menu(&$variables, $hook) {
+function gmx_preprocess_menu(&$variables, $hook) {
   if ($hook == 'menu') {
     $current_path = \Drupal::request()->getRequestUri();
     foreach ($variables['items'] as &$item) {
@@ -61,7 +61,7 @@ function drupal8_zymphonies_preprocess_menu(&$variables, $hook) {
         if ($item['url']->toString() == $current_path) {
           $item['is_active'] = TRUE;
         } elseif (count($item['below'])) { 
-          _drupal8_zymphonies_menu_process_submenu($item['below'], $current_path);
+          _gmx_menu_process_submenu($item['below'], $current_path);
         } 
       }
     }
@@ -71,13 +71,13 @@ function drupal8_zymphonies_preprocess_menu(&$variables, $hook) {
 /**
  * Set active and active-trail class for sub-menus recursively.
  */
-function _drupal8_zymphonies_menu_process_submenu(&$submenu, $current_path) {
+function _gmx_menu_process_submenu(&$submenu, $current_path) {
   foreach ($submenu as &$item) {
     if ($item['in_active_trail']) {
       if ($item['url']->toString() == $current_path) {
         $item['is_active'] = TRUE;
       } elseif (count($item['below'])) { 
-        _drupal8_zymphonies_menu_process_submenu($item['below'], $current_path);
+        _gmx_menu_process_submenu($item['below'], $current_path);
       }
     }
   }
